@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0d10">
+<title>Jual / Borongan — Word Compud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">W</span>
+      Word Compud
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="produk.html">Produk</a>
+      <a href="jual.html" class="active">Jual / Borongan</a>
+    </div>
+    <div class="nav-right">
+      <a href="produk.html" class="nav-cta desktop-only">Belanja Sekarang</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-head">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Jual ke Kami</div>
+      <h2>Barang Nganggur Jadi Duit 💸</h2>
+      <p>Isi form di bawah — tim kami cek dan kasih penawaran kurang dari 1x24 jam (hari kerja).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 30px;">
+  <div class="container">
+    <div class="form-card reveal">
+      <div class="hint">
+        💡 <strong>Tips biar dapat harga max:</strong> sebutkan kondisi selengkap mungkin
+        (kelengkapan boxed/garansi, ada bekas pemakaian atau nggak), dan kirim foto ke WhatsApp setelah form terkirim.
+      </div>
+
+      <form id="jualForm">
+        <div class="field-row">
+          <div class="field">
+            <label for="nama">Nama kamu</label>
+            <input type="text" id="nama" required placeholder="misal: Dede">
+          </div>
+          <div class="field">
+            <label for="kontak">No. WhatsApp</label>
+            <input type="tel" id="kontak" required placeholder="08xxxxxxxxxx">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="jenis">Mau ngapain nih?</label>
+          <select id="jenis" required>
+            <option value="jual">Jual barang ke toko</option>
+            <option value="tukar">Tukar tambah komponen baru</option>
+            <option value="borongan">Jual borongan (kantor / lab / warnet / reseller)</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="kategori">Kategori barang</label>
+            <select id="kategori" required>
+              <option value="PC / Rakitan lengkap">PC / Rakitan lengkap</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Komponen (VGA / CPU / RAM / dll)">Komponen (VGA / CPU / RAM / dll)</option>
+              <option value="Monitor">Monitor</option>
+              <option value="Aksesoris / Periferal">Aksesoris / Periferal</option>
+              <option value="Lainnya / Campur">Lainnya / Campur</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="jumlah">Jumlah unit <small>(kira-kira aja gapapa)</small></label>
+            <input type="number" id="jumlah" min="1" value="1" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="detail">Detail barang</label>
+          <textarea id="detail" required placeholder="Contoh: PC Rakitan Gen 8, i5-8400 + GTX 1060, RAM 16GB, SSD 512GB + HDD 1TB. Pakai sehari-hari buat editing, kondisi normal, mulus."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim via WhatsApp →</button>
+      </form>
+    </div>
+
+    <!-- Info borongan -->
+    <div class="split-banner" id="borongan" style="margin-top: 60px;">
+      <div class="banner-card reveal">
+        <span class="tag">Borongan</span>
+        <h3>Aturan Main Borongan</h3>
+        <ul>
+          <li>Minimal beberapa unit — semakin banyak, semakin ringan prosesnya</li>
+          <li>Unit hidup maupun mati sama-sama kami tawarkan (beda harga, jelas)</li>
+          <li>Kami bisa survey ke lokasi untuk puluhan unit ke atas</li>
+          <li>Pembayaran setelah barang dicek bersama, tunai/transfer</li>
+        </ul>
+      </div>
+      <div class="banner-card alt reveal">
+        <span class="tag">Tukar Tambah</span>
+        <h3>Gampang Kok Caranya</h3>
+        <ul>
+          <li>Kirim detail barang lamamu lewat form di atas</li>
+          <li>Kami kasih estimasi harga tukar</li>
+          <li>Pilih barang baru yang diinginkan</li>
+          <li>Tinggal bayar selisihnya — barang lama kami ambil sekalian</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ singkat -->
+    <div style="max-width: 760px; margin: 70px auto 0;">
+      <div class="section-head reveal">
+        <div class="kicker">FAQ Jual</div>
+        <h2>Masih Ragu?</h2>
+      </div>
+      <div class="faq-wrap">
+        <details class="faq-item reveal">
+          <summary>Barang mati / rusak juga diterima? <span class="chev">▾</span></summary>
+          <div class="faq-body">Ya! Khususnya buat borongan — unit mati, mati total, atau rongsokan tetap kami tawarkan dengan harga tersendiri. Ngga ada ruginya nanya.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Data di laptop/PC saya aman nggak? <span class="chev">▾</span></summary>
+          <div class="faq-body">Aman. Kalau masih bisa diakses, kami sarankan backup &amp; wipe sendiri sebelum serah terima. Kalau nggak bisa nyala, storage kami musnahkan (format/destruct) dan bisa disaksikan langsung kalau mau.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Pembayarannya kapan? <span class="chev">▾</span></summary>
+          <div class="faq-body">Setelah barang dicek bersama di tempat/lokasi, bayar hari itu juga. Tunai atau transfer, bebas.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-logo">W</span>
+          Word Compud
+        </a>
+        <p>Toko komputer & jasa PC build. Beli, jual, tukar tambah, borongan — semua beres di satu tempat.</p>
+      </div>
+      <div>
+        <h4>Halaman</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="index.html#layanan">Layanan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hubungi Kami</h4>
+        <ul>
+          <li><a href="https://wa.me/6289603142814" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dede Qusnul — Word Compud. All rights reserved.</div>
+      <div>Dibuat dengan ⚡ &amp; kopi</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons -->
+<a class="fab-wa" href="https://wa.me/6289603142814?text=Halo%20Word%20Compud!%20Saya%20mau%20jual%20barang." target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.27z"/></svg>
+</a>
+<button class="fab-top" id="fabTop" aria-label="Kembali ke atas">↑</button>
+
+<script>
+// ===== GANTI dengan nomor WhatsApp toko =====
+const WA_NUMBER = "6289603142814";
+
+document.getElementById("jualForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value.trim();
+  const kontak = document.getElementById("kontak").value.trim();
+  const jenis = document.getElementById("jenis");
+  const jenisText = jenis.options[jenis.selectedIndex].text;
+  const kategori = document.getElementById("kategori").value;
+  const jumlah = document.getElementById("jumlah").value;
+  const detail = document.getElementById("detail").value.trim();
+
+  const pesan =
+    `Halo Word Compud! Saya mau ${jenisText.toLowerCase()}.\n\n` +
+    `👤 Nama: ${nama}\n` +
+    `📱 WA: ${kontak}\n` +
+    `📦 Kategori: ${kategori}\n` +
+    `🔢 Jumlah: ${jumlah} unit\n\n` +
+    `📝 Detail:\n${detail}\n\n` +
+    `Mohon info penawarannya ya. Terima kasih!`;
+
+  window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(pesan), "_blank");
+});
+
+// ===== Navbar & floating (shared) =====
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 20);
+}, { passive: true });
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("open");
+  navLinks.classList.toggle("open");
+});
+navLinks.querySelectorAll("a").forEach(a =>
+  a.addEventListener("click", () => {
+    burger.classList.remove("open");
+    navLinks.classList.remove("open");
+  })
+);
+
+const fabTop = document.getElementById("fabTop");
+window.addEventListener("scroll", () => {
+  fabTop.classList.toggle("show", window.scrollY > 500);
+}, { passive: true });
+fabTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("visible");
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0d10">
+<title>Produk — Word Compud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">W</span>
+      Word Compud
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="produk.html" class="active">Produk</a>
+      <a href="jual.html">Jual / Borongan</a>
+    </div>
+    <div class="nav-right">
+      <a href="jual.html" class="nav-cta desktop-only">Jual Barangmu</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-head">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Katalog</div>
+      <h2>Produk Kami</h2>
+      <p>Semua barang dicek & di-test sebelum dipajang, kondisi mulus semua. Klik foto buat lihat galeri lengkapnya!</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 30px;">
+  <div class="container">
+    <!-- Filter & pencarian -->
+    <div class="toolbar">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="search" placeholder="Cari produk... (misal: Gen 8, keyboard)">
+      </div>
+      <select class="sort-select" id="sort" aria-label="Urutkan">
+        <option value="populer">Paling Populer</option>
+        <option value="murah">Harga Termurah</option>
+        <option value="mahal">Harga Tertinggi</option>
+        <option value="rating">Rating Tertinggi</option>
+      </select>
+      <button class="chip active" data-filter="semua">Semua</button>
+      <button class="chip" data-filter="keyboard">Keyboard</button>
+      <button class="chip" data-filter="mouse">Mouse</button>
+      <button class="chip" data-filter="kabel">Kabel</button>
+      <button class="chip" data-filter="rakitan">PC Rakitan</button>
+      <button class="chip" data-filter="buildup">PC Build Up</button>
+      <button class="chip" data-filter="minipc">Mini PC</button>
+      <button class="chip" data-filter="monitor">Monitor</button>
+    </div>
+
+    <p class="result-count" id="resultCount"></p>
+
+    <!-- Grid produk -->
+    <div class="grid grid-4" id="productGrid"></div>
+
+    <p class="center muted" id="emptyMsg" style="display:none; padding: 50px 0;">
+      Nggak ketemu nih 😅 coba kata kunci lain, atau
+      <a href="jual.html" style="color: var(--accent);">kabari kami kalau lagi nyari barang spesifik</a>.
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-band reveal" style="margin-top: 60px;">
+      <h2>Nggak Nemuu yang Dicari?</h2>
+      <p>Barang yang lu cari mungkin ready tapi belum sempat dipajang. Chat aja, kami cek stok realita.</p>
+      <a href="https://wa.me/6289603142814?text=Halo%20Word%20Compud!%20Saya%20nyari%20barang%20nih." target="_blank" rel="noopener" class="btn btn-primary">💬 Tanya Stok via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-logo">W</span>
+          Word Compud
+        </a>
+        <p>Toko komputer & jasa PC build. Beli, jual, tukar tambah, borongan — semua beres di satu tempat.</p>
+      </div>
+      <div>
+        <h4>Halaman</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jual.html">Jual / Borongan</a></li>
+          <li><a href="index.html#layanan">Layanan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hubungi Kami</h4>
+        <ul>
+          <li><a href="https://wa.me/6289603142814" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dede Qusnul — Word Compud. All rights reserved.</div>
+      <div>Dibuat dengan ⚡ &amp; kopi</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons -->
+<a class="fab-wa" href="https://wa.me/6289603142814?text=Halo%20Word%20Compud!" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.27z"/></svg>
+</a>
+<button class="fab-top" id="fabTop" aria-label="Kembali ke atas">↑</button>
+
+<!-- ====== Lightbox galeri (ala marketplace) ====== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Galeri foto produk">
+  <button class="lb-close" id="lbClose" aria-label="Tutup">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Foto sebelumnya">‹</button>
+  <div class="lb-stage" id="lbStage">
+    <div class="lb-track" id="lbTrack"></div>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Foto berikutnya">›</button>
+  <div class="lb-dots" id="lbDots"></div>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+// ===== Render — data dari server (API) =====
+const CATEGORY_META = {
+  keyboard: { label: "Keyboard",    icon: "⌨️" },
+  mouse:    { label: "Mouse",       icon: "🖱️" },
+  kabel:    { label: "Kabel",       icon: "🔌" },
+  rakitan:  { label: "PC Rakitan",  icon: "🖥️" },
+  buildup:  { label: "PC Build Up", icon: "🧰" },
+  minipc:   { label: "Mini PC",     icon: "📦" },
+  monitor:  { label: "Monitor",     icon: "🖼️" }
+};
+const WA_NUMBER = "6289603142814"; // GANTI dengan nomor WhatsApp toko
+
+const grid = document.getElementById("productGrid");
+const emptyMsg = document.getElementById("emptyMsg");
+const resultCount = document.getElementById("resultCount");
+
+let PRODUCTS = [];
+
+async function loadProducts() {
+  try {
+    const res = await fetch("/api/products");
+    const json = await res.json();
+    PRODUCTS = json.data || [];
+  } catch (err) {
+    PRODUCTS = [];
+    emptyMsg.style.display = "block";
+  }
+  render();
+}
+
+function formatPrice(n) {
+  return "Rp " + n.toLocaleString("id-ID");
+}
+
+function conditionBadge(c) {
+  if (c === "best") return '<span class="badge best">Best Seller</span>';
+  if (c === "used") return '<span class="badge used">Bekas</span>';
+  return '<span class="badge ready">Ready</span>';
+}
+
+function stars(r) {
+  const full = Math.round(r);
+  return "★".repeat(full) + "☆".repeat(5 - full);
+}
+
+function currentFilter() {
+  const active = document.querySelector(".chip.active");
+  return active ? active.dataset.filter : "semua";
+}
+
+function thumbHTML(p, meta) {
+  const imgs = (p.images && p.images.length) ? p.images : null;
+  if (imgs) {
+    return `
+      <div class="product-thumb">
+        ${conditionBadge(p.cond)}
+        <img class="pimg" src="${imgs[0]}" alt="${p.name}" loading="lazy">
+        ${imgs.length > 1 ? `<span class="photo-count">📷 ${imgs.length}</span>` : ""}
+      </div>`;
+  }
+  return `
+    <div class="product-thumb">
+      ${conditionBadge(p.cond)}
+      <span class="ph-icon">${meta.icon}</span>
+    </div>`;
+}
+
+function render() {
+  const products = PRODUCTS;
+  const q = document.getElementById("search").value.toLowerCase().trim();
+  const sortBy = document.getElementById("sort").value;
+  const filter = currentFilter();
+
+  let items = products.filter(p =>
+    (filter === "semua" || p.cat === filter) &&
+    (!q || p.name.toLowerCase().includes(q) || (CATEGORY_META[p.cat] || {}).label.toLowerCase().includes(q))
+  );
+
+  if (sortBy === "murah") items.sort((a, b) => a.price - b.price);
+  else if (sortBy === "mahal") items.sort((a, b) => b.price - a.price);
+  else if (sortBy === "rating") items.sort((a, b) => b.rating - a.rating);
+  else items.sort((a, b) => (b.sold || 0) - (a.sold || 0));
+
+  grid.innerHTML = items.map((p, i) => {
+    const meta = CATEGORY_META[p.cat] || { label: p.cat, icon: "📦" };
+    const hasGallery = p.images && p.images.length;
+    return `
+    <div class="product-card" style="animation-delay: ${Math.min(i * 40, 320)}ms;">
+      ${hasGallery ? `<div data-gallery="${products.indexOf(p)}" style="cursor:zoom-in;">${thumbHTML(p, meta)}</div>` : thumbHTML(p, meta)}
+      <div class="product-info">
+        <span class="product-cat">${meta.label}</span>
+        <span class="product-name">${p.name}</span>
+        <span class="product-rating">${stars(p.rating)} <span>${p.rating} · Terjual ${p.sold}</span></span>
+        <span class="product-price">${formatPrice(p.price)}</span>
+        <div class="product-cta">
+          <a class="btn-sm buy" href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo Word Compud! Saya mau beli: " + p.name + " (" + formatPrice(p.price) + ")")}" target="_blank" rel="noopener">Beli</a>
+          <a class="btn-sm chat" href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo Word Compud! Saya mau tanya soal: " + p.name)}" target="_blank" rel="noopener">Chat</a>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  emptyMsg.style.display = items.length ? "none" : "block";
+  resultCount.textContent = items.length
+    ? `Menampilkan ${items.length} produk${q ? ` untuk "${q}"` : ""}`
+    : "";
+}
+
+// ===== Events =====
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    render();
+  });
+});
+
+document.getElementById("search").addEventListener("input", render);
+document.getElementById("sort").addEventListener("change", render);
+
+// ===== Lightbox galeri =====
+const lightbox = document.getElementById("lightbox");
+const lbTrack = document.getElementById("lbTrack");
+const lbDots = document.getElementById("lbDots");
+const lbCounter = document.getElementById("lbCounter");
+let lbImages = [];
+let lbIndex = 0;
+
+function openLightbox(images, start = 0) {
+  lbImages = images;
+  lbIndex = start;
+  lbTrack.innerHTML = images.map(src => `<img class="lb-img" src="${src}" alt="" draggable="false">`).join("");
+  lbDots.innerHTML = images.map((_, i) => `<span class="lb-dot${i === 0 ? " active" : ""}" data-i="${i}"></span>`).join("");
+  updateLB();
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function updateLB() {
+  lbTrack.style.transform = `translateX(-${lbIndex * 100}%)`;
+  lbDots.querySelectorAll(".lb-dot").forEach((d, i) => d.classList.toggle("active", i === lbIndex));
+  lbCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+}
+
+function lbGo(delta) {
+  lbIndex = (lbIndex + delta + lbImages.length) % lbImages.length;
+  updateLB();
+}
+
+document.getElementById("lbClose").addEventListener("click", closeLightbox);
+document.getElementById("lbPrev").addEventListener("click", () => lbGo(-1));
+document.getElementById("lbNext").addEventListener("click", () => lbGo(1));
+lbDots.addEventListener("click", e => {
+  const d = e.target.closest(".lb-dot");
+  if (d) { lbIndex = parseInt(d.dataset.i, 10); updateLB(); }
+});
+lightbox.addEventListener("click", e => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", e => {
+  if (!lightbox.classList.contains("open")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowLeft") lbGo(-1);
+  if (e.key === "ArrowRight") lbGo(1);
+});
+
+// Buka galeri dari kartu produk
+grid.addEventListener("click", e => {
+  const gal = e.target.closest("[data-gallery]");
+  if (!gal) return;
+  const p = PRODUCTS[parseInt(gal.dataset.gallery, 10)];
+  if (p && p.images && p.images.length) openLightbox(p.images, 0);
+});
+
+// Swipe/drag di lightbox (mouse + touch)
+const lbStage = document.getElementById("lbStage");
+let dragStartX = null, dragDX = 0, dragging = false;
+
+function dragStart(x) { dragStartX = x; dragDX = 0; dragging = true; lbTrack.classList.add("dragging"); }
+function dragMove(x) {
+  if (!dragging) return;
+  dragDX = x - dragStartX;
+  lbTrack.style.transform = `translateX(calc(-${lbIndex * 100}% + ${dragDX}px))`;
+}
+function dragEnd() {
+  if (!dragging) return;
+  dragging = false;
+  lbTrack.classList.remove("dragging");
+  const threshold = Math.min(lbStage.clientWidth * 0.18, 120);
+  if (dragDX <= -threshold) lbGo(1);
+  else if (dragDX >= threshold) lbGo(-1);
+  else updateLB();
+}
+
+lbStage.addEventListener("mousedown", e => { e.preventDefault(); dragStart(e.clientX); });
+window.addEventListener("mousemove", e => dragMove(e.clientX));
+window.addEventListener("mouseup", dragEnd);
+lbStage.addEventListener("touchstart", e => dragStart(e.touches[0].clientX), { passive: true });
+lbStage.addEventListener("touchmove", e => dragMove(e.touches[0].clientX), { passive: true });
+lbStage.addEventListener("touchend", dragEnd);
+
+// ===== Navbar & floating (shared) =====
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 20);
+}, { passive: true });
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("open");
+  navLinks.classList.toggle("open");
+});
+navLinks.querySelectorAll("a").forEach(a =>
+  a.addEventListener("click", () => {
+    burger.classList.remove("open");
+    navLinks.classList.remove("open");
+  })
+);
+
+const fabTop = document.getElementById("fabTop");
+window.addEventListener("scroll", () => {
+  fabTop.classList.toggle("show", window.scrollY > 500);
+}, { passive: true });
+fabTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+// Reveal CTA band
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("visible");
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+loadProducts();
+</script>
+
+</body>
+</html>
